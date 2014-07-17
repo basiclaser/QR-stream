@@ -760,12 +760,14 @@ function QRTransformer(options){
 util.inherits(QRTransformer, Transform);
 
 QRTransformer.prototype._transform = function(chunk, encoding, callback) {
-    var buf = new Buffer(genframe(chunk.toString()));
-    // chunk.write(buf);
-    this.push(buf;
-    // console.log(buf);
+    this.push(genframe(chunk.toString()).join(""));
     callback();
 };
+
+QRTransformer.prototype._flush = function(cb) {
+    cb();
+}
+
 
 exports.QRTransformer = QRTransformer;
 
