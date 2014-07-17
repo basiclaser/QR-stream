@@ -767,7 +767,6 @@ QRTransformer.prototype._transform = function(chunk, encoding, callback) {
     callback();
 };
 
-
 exports.QRTransformer = QRTransformer;
 
 
