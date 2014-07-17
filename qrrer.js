@@ -10,9 +10,9 @@ var fs = require('fs');
 var inp = fs.createReadStream('input.txt');
 var out = fs.createWriteStream('output.txt');
 
-// inp.pipe(qrts).pipe(out);
+inp.pipe(qrts).pipe(out);
 
-inp.pipe(qrts).pipe(process.stdout);
+// inp.pipe(qrts).pipe(process.stdout);
 // inp.end;
 // qrts.pipe(process.stdout); // output to stdout
 // qrts.write('hello world\n'); // input line 1
